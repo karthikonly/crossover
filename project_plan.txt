@@ -7,30 +7,34 @@ steps breakup - done
 read requirements - done
 use cases - done
 high level design - done
+research js client - done
 
 model/db design
 routes/controllers/APIs design
 view design
-security design
-
-research client - done
 
 rails new project - done
 git initialize - done
 integrate mysql - done
 database.yml - done
+favicon - done
 
+integrate cancan - ongoing (created ability.rb, exception catching)
 integrate devise - ongoing
-integrate cancan - ongoing
-integrate mailer
-integrate bootstrap
-integrate react
-integrate PDF creator
 
 coding - rb:models
 coding - rb:seeds
+
 coding - rb:routes
 coding - rb:controllers
+
+integrate bootstrap
+integrate react
+integrate mailer
+integrate PDF creator
+
+
+security design
 test code - rb:rspec (models + controllers)
 
 rampup react (or ember)
