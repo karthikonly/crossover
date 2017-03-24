@@ -1,0 +1,51 @@
+cross over project - original estimate - 30 hours
+spent: 
+mar24: 10:30 pm - 12:30 pm - 2 hrs
+
+todo:
+steps breakup - done
+read requirements - done
+use cases - done
+high level design - done
+
+model/db design
+routes/controllers/APIs design
+view design
+security design
+
+research client - done
+
+rails new project - done
+git initialize
+integrate mysql
+integrate devise
+integrate cancan
+integrate mailer
+integrate bootstrap
+integrate react
+integrate PDF creator
+
+coding - rb:models
+coding - rb:seeds
+coding - rb:controllers
+test code - rb:rspec (models + controllers)
+
+rampup react (or ember)
+coding - js:views
+test code - js:jasmine
+
+performance enhancements
+security evaluation
+error handling
+beautification/css fixes
+end to end testing
+
+create comments throughout the code
+create readme with info in the pdf
+create uml diagram for the project
+create design document with info in the pdf (embed uml screenshots)
+create sql data file dump of seed data required
+create video file with demo of all the screens
+package the product as per specifications (readme, design, demo video, sql, code)
+
+optional: cucumber testing

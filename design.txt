@@ -1,0 +1,42 @@
+Objective: Create the architecture and design of a Customer Support ticketing system. Implement the system's services and applications.
+
+Prerequisites: RoR + REST API + MySQL + Bootstrap + JS (??)
+JS: React (or ember)
+JS Testing: Jasmine (Qunit/Karma)
+
+Requirements/Use Cases:
+
+Customer Support Portal
+- Sign up
+- Sign in
+- List of Support Requests (list)
+- Create Support Request (create)
+- Provide Additional information (update) 
+- Status of each request (show)
+- No Delete
+
+Support Agent Portal
+- Sign in
+- No Sign up
+- List of Support Requests (list, filters: status, created_at, updated_at)
+- Status of each request (show)
+- Process/Respond to each request (update)
+- No Delete
+- No Create
+- Report Generation (list of all tickets closed last month)
+
+Admin User
+- Support Agents: List, Show, Create, Update, Delete
+- Customers: List, Show, Update, Delete (No Create)
+- Support Requests: List, Show, Update, Delete (No Create)
+- Products on Support Request
+- Other Configurations:
+- Reapers to delete old requests
+
+High Level Design:
+Models: User, SupportRequest, Roles, Products (on support request), RequestLog
+States of SupportRequest: Requested, InProgress, NeedsInformation, Closed, Deleted
+Seed Data: all 3 roles, SR in all modes.
+Json Endpoints as well as html end points
+Authentication + Authorization
+Each View is a React JS SPA with operations supported
