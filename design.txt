@@ -10,8 +10,8 @@ Customer Support Portal
 - Sign up
 - Sign in
 - List of Support Requests (list)
-- Create Support Request (create)
-- Provide Additional information (update) 
+- Create Support Request (create) (create support log)
+- Provide Additional information (update) (create support log)
 - Status of each request (show)
 - No Delete
 
@@ -20,7 +20,7 @@ Support Agent Portal
 - No Sign up
 - List of Support Requests (list, filters: status, created_at, updated_at)
 - Status of each request (show)
-- Process/Respond to each request (update)
+- Process to each request (update) (create support log)
 - No Delete
 - No Create
 - Report Generation (list of all tickets closed last month)
@@ -28,15 +28,23 @@ Support Agent Portal
 Admin User
 - Support Agents: List, Show, Create, Update, Delete
 - Customers: List, Show, Update, Delete (No Create)
-- Support Requests: List, Show, Update, Delete (No Create)
+- Support Requests: List, Show, Update, Delete (No Create). List, Create, Delete Support Log
 - Products on Support Request
 - Other Configurations:
 - Reapers to delete old requests
 
 High Level Design:
-Models: User, SupportRequest, Roles, Products (on support request), RequestLog
+Models: User, SupportRequest, Roles, Products (on support request), SupportLogs
 States of SupportRequest: Requested, InProgress, NeedsInformation, Closed, Deleted
 Seed Data: all 3 roles, SR in all modes.
 Json Endpoints as well as html end points
 Authentication + Authorization
 Each View is a React JS SPA with operations supported
+
+Model Design (all have created_at, updated_at, index on id, foreign key):
+Roles: Admin, Customer, Agent
+User: email, name, password, role
+RequestState: Requested, InProgress, NeedsInformation, Closed, Deleted
+Product: name
+SupportRequest: creator:user, lastAgent:user, product, requestState, many SupportLogs
+SupportLog: SupportRequest, agent, content
