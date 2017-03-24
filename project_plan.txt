@@ -17,7 +17,9 @@ research client - done
 
 rails new project - done
 git initialize - done
-integrate mysql - ongoing
+integrate mysql - done
+database.yml - done
+
 integrate devise - ongoing
 integrate cancan - ongoing
 integrate mailer
@@ -27,6 +29,7 @@ integrate PDF creator
 
 coding - rb:models
 coding - rb:seeds
+coding - rb:routes
 coding - rb:controllers
 test code - rb:rspec (models + controllers)
 
