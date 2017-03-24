@@ -16,10 +16,10 @@ security design
 research client - done
 
 rails new project - done
-git initialize
-integrate mysql
-integrate devise
-integrate cancan
+git initialize - done
+integrate mysql - ongoing
+integrate devise - ongoing
+integrate cancan - ongoing
 integrate mailer
 integrate bootstrap
 integrate react
