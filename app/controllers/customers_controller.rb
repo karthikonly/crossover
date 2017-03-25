@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :set_support_request, only: [:show, :edit, :update, :destroy]
+  before_action :set_support_request, only: [:show, :edit, :update]
   before_action :validate_current_user
 
   # GET /customers

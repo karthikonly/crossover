@@ -1,0 +1,39 @@
+<h1>Support Requests Created</h1>
+
+<p>
+  Agent Name: <%= current_user.fullname %>
+</p>
+
+<p>
+  Email: <%= current_user.email %>
+</p>
+
+<p>
+  Account Created at: <%= current_user.created_at.to_date %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created Date</th>
+      <th>Customer</th>
+      <th>Product</th>
+      <th>Request state</th>
+      <th>Last Agent</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_requests.each do |support_request| %>
+      <tr>
+        <td><%= support_request.created_at.to_date %></td>
+        <td><%= support_request.creator.fullname %></td>
+        <td><%= support_request.product.name %></td>
+        <td><%= support_request.request_state.name %></td>
+        <td><%= support_request.handler.try(:fullname) %></td>
+        <td><%= link_to support_request.title, agent_path(support_request) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

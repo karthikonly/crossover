@@ -48,17 +48,19 @@ finish agent flow - ongoing :::
 - List of Support Requests (list) - ongoing
 - Status of each request (show) - ongoing
 - Process to each request (update) (create support log, change status) - ongoing
-- No Delete
-- No Create
-- Report Generation (list of all tickets closed last month)
+- No Delete - done
+- No Create - done
+- Report Generation (list of all tickets closed last month) - #TODO
 
 fix application.html.erb for customer/agent/admin menu
 finish admin flow
 
 devise views: prevent self user deletion
+add pagination to all index pages
 
 routes/controllers/APIs design
 API with devise, use API token
+API of support request should include support logs
 security design
 
 integrate mailer
