@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @support_request.title %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @support_request.creator %>
+</p>
+
+<p>
+  <strong>Handler:</strong>
+  <%= @support_request.handler %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @support_request.product %>
+</p>
+
+<p>
+  <strong>Request state:</strong>
+  <%= @support_request.request_state %>
+</p>
+
+<%= link_to 'Edit', edit_support_request_path(@support_request) %> |
+<%= link_to 'Back', support_requests_path %>

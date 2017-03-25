@@ -34,7 +34,7 @@ Admin User
 - Reapers to delete old requests
 
 High Level Design:
-Models: User, SupportRequest, Roles, Products (on support request), SupportLogs
+Models: Roles, User, SupportRequest, Products (on support request), SupportLogs
 States of SupportRequest: Requested, InProgress, NeedsInformation, Closed, Deleted
 Seed Data: all 3 roles, SR in all modes.
 Json Endpoints as well as html end points
@@ -42,9 +42,9 @@ Authentication + Authorization
 Each View is a React JS SPA with operations supported
 
 Model Design (all have created_at, updated_at, index on id, foreign key):
-Roles: Admin, Customer, Agent
-User: email, name, password, role
-RequestState: Requested, InProgress, NeedsInformation, Closed, Deleted
-Product: name
-SupportRequest: creator:user, lastAgent:user, product, requestState, many SupportLogs
-SupportLog: SupportRequest, agent, content
+Roles: name: Admin, Customer, Agent - done
+User: email, name, password, role_id - done
+RequestState: name: Requested, InProgress, NeedsInformation, Closed, Deleted - done
+Product: name - done
+SupportRequest: title, creator:user, lastAgent:user, product, requestState, many SupportLogs - done
+SupportLog: SupportRequest, agent, content - done

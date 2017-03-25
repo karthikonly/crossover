@@ -1,6 +1,8 @@
 cross over project - original estimate - 30 hours
 spent: 
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
+mar25: 10:30 am - 11:00 am - 0.50 hrs
+     : 11:30 am - 
 
 todo:
 steps breakup - done
@@ -18,19 +20,18 @@ git initialize - done
 integrate mysql - done
 database.yml - done
 favicon - done
+coding - rb:models - done
+coding - rb:seeds - done
+integrate bootstrap - done
+coding - rb:routes - done
+
+coding - rb:controllers
 
 integrate devise - ongoing
-coding - rb:models - 
-
 sign in and signout page
 API with devise, use API token
-coding - rb:seeds
+integrate cancan - ongoing
 
-coding - rb:routes
-coding - rb:controllers
-integrate cancan - ongoing (created ability.rb, exception catching)
-
-integrate bootstrap
 integrate react
 integrate mailer
 integrate PDF creator
