@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'mysql2'
 gem 'cancancan'
+gem 'ffaker'
 
 group :development, :test do
   gem 'byebug'

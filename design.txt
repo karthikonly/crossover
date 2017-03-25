@@ -6,7 +6,7 @@ JS Testing: Jasmine (Qunit/Karma)
 
 Requirements/Use Cases:
 
-Customer Support Portal
+Customer Portal
 - Sign up
 - Sign in
 - List of Support Requests (list)

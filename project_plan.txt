@@ -2,8 +2,8 @@ cross over project - original estimate - 30 hours
 spent: 
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
-     : 11:30 am - 12:30 pm - 1.00 hrs
-     : 12:45 pm - 
+     : 11:30 am - 01:00 pm - 1.50 hrs
+     : 01:50 pm - 
 
 todo:
 steps breakup - done
@@ -13,8 +13,6 @@ high level design - done
 research js client - done
 model/db design - done
 
-routes/controllers/APIs design
-view design
 
 rails new project - done
 git initialize - done
@@ -22,26 +20,46 @@ integrate mysql - done
 database.yml - done
 favicon - done
 coding - rb:models - done
-coding - rb:seeds - done
+coding - rb:seeds:basic - done
 integrate bootstrap - done
-coding - rb:routes - done
+coding - rb:routes:basic- done
+coding - rb:controllers:basic - done
+integrate devise:basic - done
+sign in and signout page - done
+coding: rb:seed:supportlog/supportrequest - done
 
-coding - rb:controllers - ongoing
-integrate devise - ongoing
+ui: fix drop downs for product selection
+ui: remove user fields
+ui: show page shows all the support logs for support request
+finish user flow - ongoing
+- Sign up - done
+- Sign in - done
+- List of Support Requests (list)
+- Create Support Request (create) (create support log)
+- Provide Additional information (update) (create support log)
+- Status of each request (show)
+- No Delete
 
-sign in and signout page
-API with devise, use API token
 integrate cancan - ongoing
 
-integrate react
+finish agent flow
+finish admin flow
+
+routes/controllers/APIs design
+API with devise, use API token
+security design
+
 integrate mailer
 integrate PDF creator
 
-security design
-test code - rb:rspec (models + controllers)
-
 rampup react (or ember)
-coding - js:views
+integrate react
+js:view design
+coding - js:views:user
+coding - js:views:agent
+coding - js:views:admin
+
+test code - rb:rspec (models + controllers)
 test code - js:jasmine
 
 create comments throughout the code

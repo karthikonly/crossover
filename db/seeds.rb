@@ -1,3 +1,5 @@
+require 'ffaker'
+
 SEED = {
   role: [
     [{id: 1, name: "Admin"},{}],
@@ -29,7 +31,6 @@ SEED = {
     [{name: "Egg Beater"},{}],
   ]
 }
-# TODO: generate data for support requests/support log
 
 def seed_data
   SEED.each do |model_name, value_hash_arrays|
@@ -41,4 +42,28 @@ def seed_data
   end
 end
 
+def seed_support_request
+  customers = User.where(role_id: 2)
+  customers.each do |customer|
+    (5+rand(5)).times do
+      sr = SupportRequest.new
+      sr.title = FFaker::DizzleIpsum.phrase
+      sr.creator = customer
+      sr.request_state = RequestState.find(1)
+      sr.product = Product.order("RAND()").first
+      sr.handler = nil
+      puts "errors: Support Request:#{sr.errors.messages}" unless sr.save
+    end
+    (10+rand(10)).times do
+      sr = SupportRequest.where(creator_id: customer.id).order("RAND()").first
+      agent = User.where(role_id: 3).order("RAND()").first
+      request_log = SupportLog.create(support_request_id: sr.id, agent_id: agent.id, content: FFaker::DizzleIpsum.sentence)
+      sr.request_state = RequestState.find(2+rand(3))
+      sr.handler = agent
+      puts "errors: Support Request:#{sr.errors.messages}" unless sr.save
+    end
+  end
+end
+
 seed_data
+seed_support_request

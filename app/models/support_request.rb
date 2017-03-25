@@ -6,5 +6,5 @@ class SupportRequest < ActiveRecord::Base
 
   has_many   :support_logs
 
-  validates_presence_of   :title, :creator_id, :handler_id, :product_id, :request_state_id
+  validates_presence_of   :title, :creator_id, :product_id, :request_state_id
 end

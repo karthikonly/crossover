@@ -10,4 +10,16 @@ class User < ActiveRecord::Base
   has_many   :handled_requests, class_name: 'SupportRequest', foreign_key: 'handler_id'
 
   validates_presence_of     :fullname, :role_id, :email
+
+  def customer?
+    self.role.name == 'Customer'
+  end
+
+  def agent?
+    self.role.name == 'Agent'
+  end
+
+  def admin?
+    self.role.name =='Admin'
+  end
 end
