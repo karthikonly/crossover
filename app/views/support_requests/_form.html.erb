@@ -1,3 +1,18 @@
+<p>
+  <strong>Created Date:</strong>
+  <%= @support_request.created_at.to_date %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @support_request.creator.fullname %>
+</p>
+
+<p>
+  <strong>Last Agent:</strong>
+  <%= @support_request.handler.try(:fullname) %>
+</p>
+
 <%= form_for(@support_request) do |f| %>
   <% if @support_request.errors.any? %>
     <div id="error_explanation">
@@ -10,26 +25,21 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :creator_id %><br>
-    <%= f.text_field :creator_id %>
+    <%= f.label :product, "Choose the product which needs support" %><br>
+    <%= f.collection_select :product_id, Product.order(:name),:id,:name, selected: @support_request.product_id %>
   </div>
   <div class="field">
-    <%= f.label :handler_id %><br>
-    <%= f.text_field :handler_id %>
+    <%= f.label :request_state_id, "Request State" %><br>
+    <%= f.collection_select :request_state_id,RequestState.order(:id),:id,:name,selected: @support_request.request_state_id %>
   </div>
   <div class="field">
-    <%= f.label :product_id %><br>
-    <%= f.text_field :product_id %>
-  </div>
-  <div class="field">
-    <%= f.label :request_state_id %><br>
-    <%= f.text_field :request_state_id %>
+    <%= f.label :description, "Update Problem Description" %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="actions">
     <%= f.submit %>

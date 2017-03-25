@@ -5,7 +5,7 @@ class SupportRequestsController < ApplicationController
   # GET /support_requests
   # GET /support_requests.json
   def index
-    @support_requests = SupportRequest.all
+    @support_requests = SupportRequest.all.order(updated_at: :desc)
   end
 
   # GET /support_requests/1
@@ -13,34 +13,15 @@ class SupportRequestsController < ApplicationController
   def show
   end
 
-  # GET /support_requests/new
-  def new
-    @support_request = SupportRequest.new
-  end
-
   # GET /support_requests/1/edit
   def edit
-  end
-
-  # POST /support_requests
-  # POST /support_requests.json
-  def create
-    @support_request = SupportRequest.new(support_request_params)
-
-    respond_to do |format|
-      if @support_request.save
-        format.html { redirect_to @support_request, notice: 'Support request was successfully created.' }
-        format.json { render :show, status: :created, location: @support_request }
-      else
-        format.html { render :new }
-        format.json { render json: @support_request.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /support_requests/1
   # PATCH/PUT /support_requests/1.json
   def update
+    @support_request.handler = current_user
+    @support_request.current_user = current_user
     respond_to do |format|
       if @support_request.update(support_request_params)
         format.html { redirect_to @support_request, notice: 'Support request was successfully updated.' }
@@ -75,6 +56,6 @@ class SupportRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def support_request_params
-      params.require(:support_request).permit(:title, :creator_id, :handler_id, :product_id, :request_state_id)
+      params.require(:support_request).permit(:title, :product_id, :request_state_id, :description)
     end
 end

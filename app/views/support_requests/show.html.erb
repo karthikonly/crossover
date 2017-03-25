@@ -1,27 +1,53 @@
 <p>
+  <strong>Created Date:</strong>
+  <%= @support_request.created_at.to_date %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @support_request.product.name %>
+</p>
+
+<p>
+  <strong>Request state:</strong>
+  <%= @support_request.request_state.name %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @support_request.title %>
 </p>
 
 <p>
-  <strong>Creator:</strong>
-  <%= @support_request.creator %>
+  <strong>Customer:</strong>
+  <%= @support_request.creator.fullname %>
 </p>
 
 <p>
-  <strong>Handler:</strong>
-  <%= @support_request.handler %>
+  <strong>Last Agent:</strong>
+  <%= @support_request.handler.try(:fullname) %>
 </p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @support_request.product %>
-</p>
+<strong>Update History:</strong>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>User</th>
+      <th>Description</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Request state:</strong>
-  <%= @support_request.request_state %>
-</p>
+  <tbody>
+    <% @support_request.support_logs.each do |support_log| %>
+      <tr>
+        <td><%= support_log.created_at.to_date %></td>
+        <td><%= support_log.user.fullname %></td>
+        <td><%= support_log.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_support_request_path(@support_request) %> |
 <%= link_to 'Back', support_requests_path %>

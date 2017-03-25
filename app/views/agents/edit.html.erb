@@ -28,7 +28,7 @@
 <%= form_for(@support_request, url: agent_path(@support_request.id), method: :put) do |f| %>
   <div class="field">
     <%= f.label :request_state_id, "Request State" %><br>
-    <%= f.collection_select :request_state_id,RequestState.order(:id).limit(4),:id,:name,selected: @support_request.request_state_id %>
+    <%= f.collection_select :request_state_id,RequestState.order(:id),:id,:name,selected: @support_request.request_state_id %>
   </div>
 
   <div class="field">

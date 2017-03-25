@@ -1,10 +1,10 @@
 cross over project - original estimate - 30 hours
-spent: 
+spent: 9.0 hrs
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:30 am - 01:00 pm - 1.50 hrs
      : 01:50 pm - 04:50 pm - 3.00 hrs
-     : 11:00 pm - 
+     : 11:00 pm - 12:45 am - 1.75 hrs
 
 todo:
 steps breakup - done
@@ -54,19 +54,17 @@ finish agent flow - ongoing :::
 fix application.html.erb for customer/agent/admin menu - done
 finish admin flow :::
 - Products on Support Request: List, Show, Update, Delete, Create - done
-- Support Requests: List, Show, Update, Delete, Create - ongoing
+- Support Requests: List, Show, Update, Delete, Create - done
+devise views: prevent self user deletion - done
+
 - Support Agents: List, Show, Create, Update, Delete
 - Customers: List, Show, Update, Delete (No Create)
-
-
-devise views: prevent self user deletion
 
 routes/controllers/APIs design
 API with devise, use API token
 API of support request should include support logs
 security design
 
-integrate mailer
 integrate PDF creator
 - Agent Report Generation (list of all tickets closed last month) - #TODO
 
@@ -95,5 +93,6 @@ create video file with demo of all the screens
 package the product as per specifications (readme, design, demo video, sql, code)
 
 later: add pagination to all user/admin/agent index pages
+later: integrate mailer
 optional: integrate cancan - ongoing
 optional: cucumber testing
