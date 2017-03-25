@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   has_many   :created_requests, class_name: 'SupportRequest', foreign_key: 'creator_id'
   has_many   :handled_requests, class_name: 'SupportRequest', foreign_key: 'handler_id'
+  has_many   :support_logs
 
   validates_presence_of     :fullname, :role_id, :email
 

@@ -1,0 +1,29 @@
+<%= form_for(@support_request, url: customers_path, method: :post) do |f| %>
+  <% if @support_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@support_request.errors.count, "error") %> prohibited this support_request from being saved:</h2>
+      <ul>
+      <% @support_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product, "Choose the product which needs support" %><br>
+    <%= f.collection_select :product_id, Product.order(:name),:id,:name, include_blank: false %>
+  </div>
+  <div class="field">
+    <%= f.label :title, "Problem Summary" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Detailed Problem Description" %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

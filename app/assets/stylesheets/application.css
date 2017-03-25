@@ -14,7 +14,23 @@
  *= require_self
  */
 
-body { padding-top: 100px; }
-footer { margin-top: 100px; text-align: center }
-table, td, th { vertical-align: middle; border: none; }
-th { border-bottom: 1px solid #DDD; }
+body {
+  padding-top: 100px;
+}
+footer {
+  margin-top: 100px;
+  text-align: center
+}
+table {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+table, td, th {
+  vertical-align: middle;
+}
+td {
+  padding: 5px;
+}
+th {
+  border-bottom: 1px solid #DDD;
+}

@@ -33,14 +33,14 @@ ActiveRecord::Schema.define(version: 20170325063712) do
 
   create_table "support_logs", force: :cascade do |t|
     t.string   "content",            limit: 255
-    t.integer  "agent_id",           limit: 4
+    t.integer  "user_id",            limit: 4
     t.integer  "support_request_id", limit: 4
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
 
-  add_index "support_logs", ["agent_id"], name: "index_support_logs_on_agent_id", using: :btree
   add_index "support_logs", ["support_request_id"], name: "index_support_logs_on_support_request_id", using: :btree
+  add_index "support_logs", ["user_id"], name: "index_support_logs_on_user_id", using: :btree
 
   create_table "support_requests", force: :cascade do |t|
     t.string   "title",            limit: 255

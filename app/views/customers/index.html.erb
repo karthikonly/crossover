@@ -1,0 +1,37 @@
+<h1>Support Requests Created</h1>
+
+<p>
+  Name: <%= current_user.fullname %>
+</p>
+
+<p>
+  Email: <%= current_user.email %>
+</p>
+
+<p>
+  Account Created at: <%= current_user.created_at.to_date %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Created Date</th>
+      <th>Request state</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_requests.each do |support_request| %>
+      <tr>
+        <td><%= support_request.product.name %></td>
+        <td><%= support_request.created_at.to_date %></td>
+        <td><%= support_request.request_state.name %></td>
+        <td><%= link_to support_request.title, customer_path(support_request) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Support request', new_customer_path %>

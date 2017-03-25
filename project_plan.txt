@@ -3,7 +3,7 @@ spent:
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:30 am - 01:00 pm - 1.50 hrs
-     : 01:50 pm - 
+     : 01:50 pm - 04:20 pm - 2.50 hrs
 
 todo:
 steps breakup - done
@@ -28,19 +28,19 @@ integrate devise:basic - done
 sign in and signout page - done
 coding: rb:seed:supportlog/supportrequest - done
 
-ui: fix drop downs for product selection
-ui: remove user fields
-ui: show page shows all the support logs for support request
+controller: create new controller - done
+ui: fix drop downs for product selection - done
+ui: show page shows all the support logs for support request - done
+accept nested attributes (different way) - done 
 finish user flow - ongoing
 - Sign up - done
 - Sign in - done
-- List of Support Requests (list)
-- Create Support Request (create) (create support log)
-- Provide Additional information (update) (create support log)
-- Status of each request (show)
-- No Delete
+- List of Support Requests (list) - done
+- Create Support Request (create) (create support log) - done
+- Provide Additional information (update) (only create support log) - done
+- Status of each request (show) - done
+- No Delete - done
 
-integrate cancan - ongoing
 
 finish agent flow
 finish admin flow
@@ -75,4 +75,5 @@ create sql data file dump of seed data required
 create video file with demo of all the screens
 package the product as per specifications (readme, design, demo video, sql, code)
 
+optional: integrate cancan - ongoing
 optional: cucumber testing

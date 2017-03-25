@@ -51,13 +51,15 @@ def seed_support_request
       sr.creator = customer
       sr.request_state = RequestState.find(1)
       sr.product = Product.order("RAND()").first
+      sr.description = FFaker::DizzleIpsum.sentence
+      sr.current_user = customer
       sr.handler = nil
       puts "errors: Support Request:#{sr.errors.messages}" unless sr.save
     end
     (10+rand(10)).times do
       sr = SupportRequest.where(creator_id: customer.id).order("RAND()").first
       agent = User.where(role_id: 3).order("RAND()").first
-      request_log = SupportLog.create(support_request_id: sr.id, agent_id: agent.id, content: FFaker::DizzleIpsum.sentence)
+      request_log = SupportLog.create(support_request_id: sr.id, user_id: agent.id, content: FFaker::DizzleIpsum.sentence)
       sr.request_state = RequestState.find(2+rand(3))
       sr.handler = agent
       puts "errors: Support Request:#{sr.errors.messages}" unless sr.save
