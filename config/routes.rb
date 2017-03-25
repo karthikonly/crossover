@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  # common urls - devise and root
+  # common urls - users, sessions and root path
   devise_for :users
   root 'site#index'
 
-  # customer urls
+  # customer actions
   resources :customers, except: [:destroy]
 
-  # admin urls
+  # agent actions
+  resources :agents, except: [:new, :create, :destroy]
+
+  # admin actions
   resources :products
   resources :support_requests
 end

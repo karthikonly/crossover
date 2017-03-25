@@ -7,7 +7,7 @@ class SupportRequest < ActiveRecord::Base
   belongs_to :product
   belongs_to :request_state
 
-  has_many   :support_logs, dependent: :destroy
+  has_many   :support_logs, -> { order(updated_at: :desc) }, dependent: :destroy
 
   validates_presence_of   :title, :creator_id, :product_id, :request_state_id
 

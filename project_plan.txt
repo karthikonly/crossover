@@ -28,11 +28,11 @@ integrate devise:basic - done
 sign in and signout page - done
 coding: rb:seed:supportlog/supportrequest - done
 
+finish user flow - done :::
 controller: create new controller - done
 ui: fix drop downs for product selection - done
 ui: show page shows all the support logs for support request - done
 accept nested attributes (different way) - done 
-finish user flow - ongoing
 - Sign up - done
 - Sign in - done
 - List of Support Requests (list) - done
@@ -41,9 +41,21 @@ finish user flow - ongoing
 - Status of each request (show) - done
 - No Delete - done
 
+coding rb:seed:more customers, more agents
+finish agent flow - ongoing :::
+- Sign in - done
+- No Sign up - done
+- List of Support Requests (list) - ongoing
+- Status of each request (show) - ongoing
+- Process to each request (update) (create support log, change status) - ongoing
+- No Delete
+- No Create
+- Report Generation (list of all tickets closed last month)
 
-finish agent flow
+fix application.html.erb for customer/agent/admin menu
 finish admin flow
+
+devise views: prevent self user deletion
 
 routes/controllers/APIs design
 API with devise, use API token
@@ -55,9 +67,10 @@ integrate PDF creator
 rampup react (or ember)
 integrate react
 js:view design
-coding - js:views:user
-coding - js:views:agent
-coding - js:views:admin
+coding - js:views:user - request: list, create, show/update
+coding - js:views:agent - request: list (filters: status, created_at, updated_at), show/udpate, pdf generate
+coding - js:views:admin - products crud, requests crud, users crud
+
 
 test code - rb:rspec (models + controllers)
 test code - js:jasmine
