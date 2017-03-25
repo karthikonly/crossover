@@ -2,7 +2,8 @@ cross over project - original estimate - 30 hours
 spent: 
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
-     : 11:30 am - 
+     : 11:30 am - 12:30 pm - 1.00 hrs
+     : 12:45 pm - 
 
 todo:
 steps breakup - done
@@ -25,9 +26,9 @@ coding - rb:seeds - done
 integrate bootstrap - done
 coding - rb:routes - done
 
-coding - rb:controllers
-
+coding - rb:controllers - ongoing
 integrate devise - ongoing
+
 sign in and signout page
 API with devise, use API token
 integrate cancan - ongoing
@@ -43,13 +44,12 @@ rampup react (or ember)
 coding - js:views
 test code - js:jasmine
 
-performance enhancements
+create comments throughout the code
 security evaluation
 error handling
 beautification/css fixes
 end to end testing
 
-create comments throughout the code
 create readme with info in the pdf
 create uml diagram for the project
 create design document with info in the pdf (embed uml screenshots)
