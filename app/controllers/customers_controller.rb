@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     # only un deleted requests belonging to this user, order by latest on top
-    @support_requests = SupportRequest.where(creator_id: current_user.id).where.not(request_state_id: 5).order(updated_at: :desc)
+    @support_requests = SupportRequest.where(creator_id: current_user.id).order(updated_at: :desc)
   end
 
   # GET /customers/1

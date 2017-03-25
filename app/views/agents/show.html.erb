@@ -42,7 +42,7 @@
     <% @support_request.support_logs.each do |support_log| %>
       <tr>
         <td><%= support_log.created_at.to_date %></td>
-        <td><%= support_log.user.customer? ? support_log.user.fullname : "Support Agent" %></td>
+        <td><%= support_log.user.fullname %></td>
         <td><%= support_log.content %></td>
       </tr>
     <% end %>

@@ -5,8 +5,8 @@ class AgentsController < ApplicationController
   # GET /agents
   # GET /agents.json
   def index
-    # only un deleted requests belonging to all users, order by latest on top
-    @support_requests = SupportRequest.where.not(request_state_id: 5).order(updated_at: :desc)
+    # only un-deleted requests belonging to all users, order by latest on top
+    @support_requests = SupportRequest.order(updated_at: :desc)
   end
 
   # GET /agents/1
@@ -25,8 +25,8 @@ class AgentsController < ApplicationController
     @support_request.current_user = current_user
     respond_to do |format|
       if @support_request.update(support_request_edit_params)
-        format.html { redirect_to customer_path(@support_request), notice: 'Support request was successfully updated.' }
-        format.json { render :show, status: :ok, location: customer_path(@support_request) }
+        format.html { redirect_to agent_path(@support_request), notice: 'Support request was successfully updated.' }
+        format.json { render :show, status: :ok, location: agent_path(@support_request) }
       else
         format.html { render :edit }
         format.json { render json: @support_request.errors, status: :unprocessable_entity }

@@ -12,15 +12,15 @@ class User < ActiveRecord::Base
 
   validates_presence_of     :fullname, :role_id, :email
 
+  def admin?
+    self.role_id == 1
+  end
+
   def customer?
-    self.role.name == 'Customer'
+    self.role_id == 2
   end
 
   def agent?
-    self.role.name == 'Agent'
-  end
-
-  def admin?
-    self.role.name =='Admin'
+    self.role_id == 3
   end
 end

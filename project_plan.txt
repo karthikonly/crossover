@@ -3,7 +3,8 @@ spent:
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:30 am - 01:00 pm - 1.50 hrs
-     : 01:50 pm - 04:20 pm - 2.50 hrs
+     : 01:50 pm - 04:50 pm - 3.00 hrs
+     : 11:00 pm - 
 
 todo:
 steps breakup - done
@@ -12,7 +13,6 @@ use cases - done
 high level design - done
 research js client - done
 model/db design - done
-
 
 rails new project - done
 git initialize - done
@@ -41,22 +41,25 @@ accept nested attributes (different way) - done
 - Status of each request (show) - done
 - No Delete - done
 
-coding rb:seed:more customers, more agents
+coding rb:seed:more customers, more agents - done
 finish agent flow - ongoing :::
 - Sign in - done
 - No Sign up - done
-- List of Support Requests (list) - ongoing
-- Status of each request (show) - ongoing
-- Process to each request (update) (create support log, change status) - ongoing
+- List of Support Requests (list) - done
+- Status of each request (show) - done
+- Process to each request (update) (create support log, change status) - done
 - No Delete - done
 - No Create - done
-- Report Generation (list of all tickets closed last month) - #TODO
 
-fix application.html.erb for customer/agent/admin menu
-finish admin flow
+fix application.html.erb for customer/agent/admin menu - done
+finish admin flow :::
+- Products on Support Request: List, Show, Update, Delete, Create - done
+- Support Requests: List, Show, Update, Delete, Create - ongoing
+- Support Agents: List, Show, Create, Update, Delete
+- Customers: List, Show, Update, Delete (No Create)
+
 
 devise views: prevent self user deletion
-add pagination to all index pages
 
 routes/controllers/APIs design
 API with devise, use API token
@@ -65,6 +68,7 @@ security design
 
 integrate mailer
 integrate PDF creator
+- Agent Report Generation (list of all tickets closed last month) - #TODO
 
 rampup react (or ember)
 integrate react
@@ -90,5 +94,6 @@ create sql data file dump of seed data required
 create video file with demo of all the screens
 package the product as per specifications (readme, design, demo video, sql, code)
 
+later: add pagination to all user/admin/agent index pages
 optional: integrate cancan - ongoing
 optional: cucumber testing

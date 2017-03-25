@@ -6,7 +6,7 @@ JS Testing: Jasmine (Qunit/Karma)
 
 Requirements/Use Cases:
 
-Customer Portal
+Customer Portal - Done
 - Sign up
 - Sign in
 - List of Support Requests (list)
@@ -15,7 +15,7 @@ Customer Portal
 - Status of each request (show)
 - No Delete
 
-Support Agent Portal
+Support Agent Portal - Done
 - Sign in
 - No Sign up
 - List of Support Requests (list, filters: status, created_at, updated_at)
@@ -25,20 +25,21 @@ Support Agent Portal
 - No Create
 - Report Generation (list of all tickets closed last month)
 
-Admin User
+Admin User - Ongoing
 - Support Agents: List, Show, Create, Update, Delete
 - Customers: List, Show, Update, Delete (No Create)
 - Support Requests: List, Show, Update, Delete (No Create). List, Create, Delete Support Log
 - Products on Support Request
-- Other Configurations:
-- Reapers to delete old requests
 
-High Level Design: - Done
-Models: Roles, User, SupportRequest, Products (on support request), SupportLogs
-States of SupportRequest: Requested, InProgress, NeedsInformation, Closed, Deleted
-Seed Data: all 3 roles, SR in all modes.
-Json Endpoints as well as html end points
-Authentication + Authorization
+High Level Design - Done
+Models: Roles, User, SupportRequest, Products (on support request), SupportLogs - Done
+States of SupportRequest: Requested, InProgress, NeedsInformation, Closed, Deleted - Done
+Seed Data: all 3 roles, SR in all modes - Done
+
+HTML flow - ongoing
+Authentication + Authorization - ongoing
+
+Json Endpoints 
 Each View is a React JS SPA with operations supported
 
 Model Design (all have created_at, updated_at, index on id, foreign key): - done

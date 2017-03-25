@@ -7,16 +7,18 @@ SEED = {
     [{id: 3, name: "Agent"},{}]
   ],
   user: [
-    [{email: "admin@service.com", role_id: 1}, {password: "admin1234", password_confirmation: "admin1234", fullname: "Administrator"}],
-    [{email: "customer@service.com", role_id: 2}, {password: "cust1234", password_confirmation: "cust1234", fullname: "Customer"}],
-    [{email: "agent@service.com", role_id: 3}, {password: "agent1234", password_confirmation: "agent1234", fullname: "Agent"}]
+    [{email: "admin1@service.com", role_id: 1}, {password: "admin1234", password_confirmation: "admin1234", fullname: "Admin 1"}],
+    [{email: "customer1@service.com", role_id: 2}, {password: "cust1234", password_confirmation: "cust1234", fullname: "Cust 1"}],
+    [{email: "agent1@service.com", role_id: 3}, {password: "agent1234", password_confirmation: "agent1234", fullname: "Agent 1"}],
+    [{email: "admin2@service.com", role_id: 1}, {password: "admin1234", password_confirmation: "admin1234", fullname: "Admin 2"}],
+    [{email: "customer2@service.com", role_id: 2}, {password: "cust1234", password_confirmation: "cust1234", fullname: "Cust 2"}],
+    [{email: "agent2@service.com", role_id: 3}, {password: "agent1234", password_confirmation: "agent1234", fullname: "Agent 2"}]
   ],
   request_state: [
     [{id: 1, name: "Opened"},{}],
     [{id: 2, name: "InProgress"},{}],
     [{id: 3, name: "NeedsInformation"},{}],
-    [{id: 4, name: "Closed"},{}],
-    [{id: 5, name: "Deleted"},{}],
+    [{id: 4, name: "Closed"},{}]
   ],
   product: [
     [{name: "Laptop"},{}],

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # admin actions
   resources :products
   resources :support_requests
+  resource  :users
 end

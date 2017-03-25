@@ -1,5 +1,6 @@
 class SupportRequestsController < ApplicationController
   before_action :set_support_request, only: [:show, :edit, :update, :destroy]
+  before_action :validate_current_user
 
   # GET /support_requests
   # GET /support_requests.json
@@ -62,6 +63,11 @@ class SupportRequestsController < ApplicationController
   end
 
   private
+    # check if the current user is admin
+    def validate_current_user
+      redirect_to :root, alert: "you must be admin to visit this part" unless current_user.admin?
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_support_request
       @support_request = SupportRequest.find(params[:id])
