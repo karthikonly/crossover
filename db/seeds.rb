@@ -61,8 +61,9 @@ def seed_support_request
     (10+rand(10)).times do
       sr = SupportRequest.where(creator_id: customer.id).order("RAND()").first
       agent = User.where(role_id: 3).order("RAND()").first
-      request_log = SupportLog.create(support_request_id: sr.id, user_id: agent.id, content: FFaker::DizzleIpsum.sentence)
       sr.request_state = RequestState.find(2+rand(3))
+      request_log = SupportLog.create(support_request_id: sr.id, user_id: agent.id, 
+              content: FFaker::DizzleIpsum.sentence, request_state_id: sr.request_state_id)
       sr.handler = agent
       puts "errors: Support Request:#{sr.errors.messages}" unless sr.save
     end

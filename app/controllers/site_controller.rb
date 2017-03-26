@@ -5,4 +5,9 @@ class SiteController < ApplicationController
     redirect_to agents_path if current_user.agent?
     redirect_to support_requests_path if current_user.admin?
   end
+
+  def report
+    redirect_to :root, alert: "Unauthorized Access" unless current_user.agent? || current_user.admin?
+    @support_requests = SupportRequest.where(request_state_id: 4).order(updated_at: :desc)
+  end
 end

@@ -13,7 +13,7 @@ class SupportRequest < ActiveRecord::Base
 
   after_save do
     unless description.blank? || current_user.nil?
-      self.support_logs.create(content: self.description, user_id: current_user.id)
+      self.support_logs.create(content: self.description, user_id: current_user.id, request_state_id: self.request_state_id)
       self.current_user = nil
       self.description = nil
     end

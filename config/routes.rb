@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'site#index'
 
+  # report for admin and agents
+  get  'site/report'
+
   # customer actions
   resources :customers, except: [:destroy]
 

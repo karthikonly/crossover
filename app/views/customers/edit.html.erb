@@ -37,6 +37,7 @@
     <tr>
       <th>Date</th>
       <th>User</th>
+      <th>State Change</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -46,6 +47,7 @@
       <tr>
         <td><%= support_log.created_at.to_date %></td>
         <td><%= support_log.user.customer? ? support_log.user.fullname : "Customer Support Agent" %></td>
+        <td><%= support_log.request_state.name %></td>
         <td><%= support_log.content %></td>
       </tr>
     <% end %>

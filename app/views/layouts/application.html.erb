@@ -25,7 +25,9 @@
           <% if user_signed_in? && current_user.admin? %>
             <li><a href="/products">Products</a></li>
             <li><a href="/support_requests">Support Requests</a></li>
-            <li><a href="/users">Users</a></li>
+            <!-- <li><a href="/users">Users</a></li> -->
+          <% elsif user_signed_in? && (current_user.admin? || current_user.agent?) %>
+            <li><a href="/site/report">Report</a></li>
           <% end %>
         </ul>
         <p class="navbar-text pull-right">
