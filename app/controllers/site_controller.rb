@@ -10,4 +10,7 @@ class SiteController < ApplicationController
     @support_requests = SupportRequest.includes(:creator, :handler, :product, :request_state, support_logs: :user).
       where(request_state_id: 4).where('updated_at > ?', 1.month.ago).order(updated_at: :desc)
   end
+
+  def react_index
+  end
 end

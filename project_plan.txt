@@ -1,5 +1,5 @@
 cross over project - original estimate - 30 hours
-spent: 11.5 hrs
+spent: 13.25 hrs
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:30 am - 01:00 pm - 1.50 hrs
@@ -7,7 +7,8 @@ mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:00 pm - 12:45 am - 1.75 hrs
 mar26: 04:40 pm - 06:10 pm - 1.50 hrs (waste - spent in pdf)
      : 06:30 pm - 07:30 pm - 1.00 hrs
-     : 08:15 pm - 
+     : 08:15 pm - 09:45 pm - 1.50 hrs
+     : 10:10 pm - 10:25 pm - 0.25 hrs
 
 todo:
 steps breakup - done
@@ -72,6 +73,9 @@ api: products - index - done
 api: request_states - index - done
 api: support request should include support logs - done
 
+rampup react - ongoing
+integrate react - ongoing
+
 api: customers: support requests
 - index - done
 - show - done
@@ -96,8 +100,6 @@ api: admin : products
 - update
 - delete
 
-rampup react
-integrate react
 
 api: users (agent/customer/admin) -
 - index
@@ -107,6 +109,7 @@ api: users (agent/customer/admin) -
 - delete
 
 html: Users: List, Show, Create, Update, Delete -
+
 api: security design, token -
 
 js:view design

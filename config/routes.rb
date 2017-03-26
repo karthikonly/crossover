@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'site/react_index'
+
   # common urls - root path, devise actions, common models list
   devise_for :users, :controllers => { registrations: 'registrations' }
   root  'site#index'
