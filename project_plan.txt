@@ -5,6 +5,7 @@ mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:30 am - 01:00 pm - 1.50 hrs
      : 01:50 pm - 04:50 pm - 3.00 hrs
      : 11:00 pm - 12:45 am - 1.75 hrs
+mar26: 04:40 pm - 06:10 pm - 1.50 hrs (waste - spent in pdf)
 
 todo:
 steps breakup - done
@@ -32,7 +33,7 @@ finish user flow - done :::
 controller: create new controller - done
 ui: fix drop downs for product selection - done
 ui: show page shows all the support logs for support request - done
-accept nested attributes (different way) - done 
+accept nested attributes (different way) - done
 - Sign up - done
 - Sign in - done
 - List of Support Requests (list) - done
@@ -55,18 +56,20 @@ fix application.html.erb for customer/agent/admin menu - done
 finish admin flow :::
 - Products on Support Request: List, Show, Update, Delete, Create - done
 - Support Requests: List, Show, Update, Delete, Create - done
+
+- Support Agents: List, Show, Create, Update, Delete - tbd
+- Customers: List, Show, Update, Delete (No Create) - tbd
+
 devise views: prevent self user deletion - done
 
-- Support Agents: List, Show, Create, Update, Delete
-- Customers: List, Show, Update, Delete (No Create)
+integrate PDF creator - ongoing
+- Agent Report Generation (list of all tickets closed last month) - ongoing
 
 routes/controllers/APIs design
 API with devise, use API token
 API of support request should include support logs
 security design
 
-integrate PDF creator
-- Agent Report Generation (list of all tickets closed last month) - #TODO
 
 rampup react (or ember)
 integrate react
