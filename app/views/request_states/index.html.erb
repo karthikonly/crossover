@@ -1,0 +1,17 @@
+<h1>Request States</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request_states.each do |request_state| %>
+      <tr>
+        <td><%= request_state.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

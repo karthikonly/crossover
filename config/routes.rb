@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  # common urls - users, sessions and root path
+  # common urls - root path, devise actions, common models list
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'site#index'
+  root  'site#index'
+  resources :request_states, only: [:index]
 
   # report for admin and agents
-  get  'site/report'
+  get   'report', to: 'site#report'
 
   # customer actions
   resources :customers, except: [:destroy]
@@ -15,5 +16,5 @@ Rails.application.routes.draw do
   # admin actions
   resources :products
   resources :support_requests, except: [:new, :create]
-  resource  :users
+  resources :users
 end

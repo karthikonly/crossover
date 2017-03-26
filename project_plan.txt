@@ -7,7 +7,7 @@ mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:00 pm - 12:45 am - 1.75 hrs
 mar26: 04:40 pm - 06:10 pm - 1.50 hrs (waste - spent in pdf)
      : 06:30 pm - 07:30 pm - 1.00 hrs
-     : 08:00 pm - 
+     : 08:15 pm - 
 
 todo:
 steps breakup - done
@@ -30,6 +30,7 @@ coding - rb:controllers:basic - done
 integrate devise:basic - done
 sign in and signout page - done
 coding: rb:seed:supportlog/supportrequest - done
+html security design - done
 
 finish user flow - done :::
 controller: create new controller - done
@@ -62,20 +63,51 @@ finish admin flow :::
 devise views: prevent self user deletion - done
 - Agent Report Generation (list of all tickets closed last month) - done
 
+api: routes/controllers design - done
+
+api: field translation - done
+api: customer agent translation helper - done
+
+api: products - index - done
+api: request_states - index - done
+api: support request should include support logs - done
+
+api: customers: support requests
+- index - done
+- show - done
+- create
+- update
+
+api: agents: support requests
+- index - done
+- show - done
+- update
+
+api: admin : support requests
+- index - done
+- show - done
+- update
+- delete
+
+api: admin : products
+- index - done
+- show - done
+- show
+- update
+- delete
 
 rampup react
 integrate react
 
+api: users (agent/customer/admin) -
+- index
+- show
+- create
+- update
+- delete
 
-
-
-- Support Agents: List, Show, Create, Update, Delete - ongoing
-- Customers: List, Show, Update, Delete (No Create) - ongoing
-
-routes/controllers/APIs design
-security design
-API with devise, use API token
-API of support request should include support logs
+html: Users: List, Show, Create, Update, Delete -
+api: security design, token -
 
 js:view design
 coding - js:views:user - request: list, create, show/update

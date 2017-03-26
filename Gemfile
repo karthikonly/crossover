@@ -13,6 +13,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'mysql2'
 gem 'ffaker'
+
+gem 'responders'
+
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
