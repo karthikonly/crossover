@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
 
   validates_presence_of     :fullname, :role_id, :email
 
+  before_validation do
+    self.role_id ||= 2
+  end
+
   def admin?
     self.role_id == 1
   end

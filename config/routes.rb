@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # common urls - users, sessions and root path
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   root 'site#index'
 
   # report for admin and agents
