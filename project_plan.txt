@@ -58,8 +58,7 @@ finish admin flow :::
 - Support Requests: List, Show, Update, Delete, Create - done
 
 devise views: prevent self user deletion - done
-
-- Agent Report Generation (list of all tickets closed last month) - ongoing
+- Agent Report Generation (list of all tickets closed last month) - done
 
 rampup react (or ember)
 integrate react
@@ -79,6 +78,8 @@ coding - js:views:admin - products crud, requests crud, users crud
 
 test code - rb:rspec (models + controllers)
 test code - js:jasmine
+
+perf: use include in all blocks :: default_scope { includes(:author).order('created_at ASC') }
 
 integrate PDF creator - later
 add pdf support to report - later

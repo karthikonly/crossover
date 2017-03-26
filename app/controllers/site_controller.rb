@@ -8,6 +8,7 @@ class SiteController < ApplicationController
 
   def report
     redirect_to :root, alert: "Unauthorized Access" unless current_user.agent? || current_user.admin?
-    @support_requests = SupportRequest.where(request_state_id: 4).order(updated_at: :desc)
+    @support_requests = SupportRequest.includes(:creator, :handler, :product, :request_state, support_logs: :user).
+      where(request_state_id: 4).where('updated_at > ?', 1.month.ago).order(updated_at: :desc)
   end
 end

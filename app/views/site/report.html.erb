@@ -14,7 +14,6 @@
       <th>Created Date</th>
       <th>Customer</th>
       <th>Product</th>
-      <th>Request state</th>
       <th>Last Agent</th>
       <th>Title</th>
     </tr>
@@ -26,10 +25,16 @@
         <td><%= support_request.created_at.to_date %></td>
         <td><%= support_request.creator.fullname %></td>
         <td><%= support_request.product.name %></td>
-        <td><%= support_request.request_state.name %></td>
         <td><%= support_request.handler.try(:fullname) %></td>
         <td><%= support_request.title %></td>
       </tr>
+      <% support_request.support_logs.each do |support_log| %>
+        <tr>
+          <td></td>
+          <td><%= support_log.user.fullname %></td>
+          <td colspan="3"><%= support_log.content %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
