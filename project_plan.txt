@@ -1,5 +1,5 @@
 cross over project - original estimate - 30 hours
-spent: 13.25 hrs
+spent: 14.50 hrs
 mar24: 10:30 pm - 12:45 pm - 2.25 hrs
 mar25: 10:30 am - 11:00 am - 0.50 hrs
      : 11:30 am - 01:00 pm - 1.50 hrs
@@ -9,6 +9,7 @@ mar26: 04:40 pm - 06:10 pm - 1.50 hrs (waste - spent in pdf)
      : 06:30 pm - 07:30 pm - 1.00 hrs
      : 08:15 pm - 09:45 pm - 1.50 hrs
      : 10:10 pm - 10:25 pm - 0.25 hrs
+mar27: 12:00 pm - 01:15 pm - 1.25 hrs
 
 todo:
 steps breakup - done

@@ -1,4 +1,6 @@
 class SiteController < ApplicationController
+  layout 'react_layout', only: [:react_index]
+
   def index
     redirect_to customers_path if current_user.customer?
     redirect_to agents_path if current_user.agent?
